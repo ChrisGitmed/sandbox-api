@@ -10,7 +10,7 @@ const dirname = path.dirname(filename);
 // Health check
 router.get('/v1/healthcheck', async (req, res) => res.status(200).send('<img src ="https://http.cat/200"/>'));
 
-// Automatically load all 'routes' files found under their respective component folders
+// Automatically load all 'routes.js' files found under their respective component folders
 const getDirectories = (path) => fs.readdirSync(path, { withFileTypes: true })
   .filter((file) => file.isDirectory())
   .map((dir) => dir.name);
