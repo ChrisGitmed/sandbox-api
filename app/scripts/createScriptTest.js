@@ -1,5 +1,5 @@
 import Yargs from 'yargs';
-const { argv } = Yargs(process.argv.slice(2));
+const { argv } = Yargs(process.argv);
 
 /**
  * {DESCRIPTION}
