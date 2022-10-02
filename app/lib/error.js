@@ -1,9 +1,5 @@
 export class Err extends Error {
-  constructor ({
-    message,
-    code = 500,
-    context = '',
-  }) {
+  constructor ({ message, code = 500, context = '' }) {
     super(message);
     this.code = code;
     this.context = context;
@@ -13,11 +9,6 @@ export class Err extends Error {
 
 export const errHandler = (err, next, context = 'No context provided') => {
   if (err instanceof Err) return next(err);
-
-  return next(new Err({
-    message: err,
-    code: 500,
-    context,
-  }));
+  return next(new Err({ message: err, code: 500, context }));
 };
 

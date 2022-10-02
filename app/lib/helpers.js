@@ -2,9 +2,7 @@ export const asCallBack = (promise) => promise.then((data) => [null, data]).catc
 
 export const pick = (obj, includeArray = []) => {
   const newObj = {};
-  includeArray.forEach((key) => {
-    newObj[key] = obj[key];
-  });
+  includeArray.forEach((key) => newObj[key] = obj[key]);
   return newObj;
 };
 
