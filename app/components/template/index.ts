@@ -4,17 +4,17 @@ export class Template {
     return 'get';
   };
 
-  static create = async () => {
+  static create = async (payload: object) => {
     console.log('create');
     return 'create';
   };
 
-  static update = async () => {
+  static update = async (uuid: string, payload: object) => {
     console.log('update');
     return 'update';
   };
 
-  static destroy = async () => {
+  static destroy = async (uuid: string) => {
     console.log('delete');
     return 'delete';
   };

@@ -4,7 +4,8 @@ import router from '../../router/index.js';
 import { Template } from './index.js';
 
 
-const bodyPropertyList = [
+
+const bodyPropertyList: string[] = [
   'prop1',
   'prop2',
   'prop3',
@@ -13,7 +14,7 @@ const bodyPropertyList = [
 // Get
 router.get(
   '/template',
-  async (req, res, next) => {
+  async (req: any, res: any, next: Function) => {
     const [err, results] = await asCallBack(Template.get());
     if (err) return errHandler(err, next, 'Template.get');
     return res.status(200).json(results);
@@ -23,7 +24,7 @@ router.get(
 // Create
 router.post(
   '/template',
-  async (req, res, next) => {
+  async (req: any, res: any, next: Function) => {
     const payload = pick(req.body, bodyPropertyList);
     const [err, resultUUID] = await asCallBack(Template.create(payload));
     if (err) return errHandler(err, next, `Template.create: ${JSON.stringify(payload)}`);
@@ -34,7 +35,7 @@ router.post(
 // Update
 router.put(
   '/template/:uuid',
-  async (req, res, next) => {
+  async (req: any, res: any, next: Function) => {
     const { uuid } = req.params;
     const payload = pick(req.body, bodyPropertyList);
     const [err, results] = await asCallBack(Template.update(uuid, payload));
@@ -46,7 +47,7 @@ router.put(
 // Delete
 router.delete(
   '/template/:uuid',
-  async (req, res, next) => {
+  async (req: any, res: any, next: Function) => {
     const { uuid } = req.params;
     const [err, results] = await asCallBack(Template.destroy(uuid));
     if (err) return errHandler(err, next, `Template.destroy: ${uuid}`);
