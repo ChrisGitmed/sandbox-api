@@ -843,6 +843,11 @@ js-sdsl@^4.1.4:
   resolved "https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.1.4.tgz"
   integrity sha512-Y2/yD55y5jteOAmY50JbUZYwk3CP3wnLPEZnlR1w9oKhITrBEtAxwuWKebFf8hMrPMgbYwFoWK/lH2sBkErELw==
 
+js-shade@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/js-shade/-/js-shade-0.0.5.tgz#5f7792b26a60c9b8afa744c44853c263bbbb2cd4"
+  integrity sha512-/dMSViblqjUy9HO4SwsR+4WmtbzfQGrLkoZEWbYJMLbzzIEjtAMzyy+vjTWqbVfGxQBytDr9da2GwoGrNBCG8Q==
+
 js-yaml@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz"
