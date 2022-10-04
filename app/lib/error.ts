@@ -2,7 +2,7 @@ interface ErrInt {
   message: string,
   code: number,
   context: string,
-};
+}
 
 export class Err extends Error {
   constructor ({ message, code = 500, context = '' }:ErrInt) {
