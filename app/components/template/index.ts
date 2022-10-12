@@ -18,5 +18,7 @@ export class Template {
     console.log('delete');
     return 'delete';
   };
+
+  // Getting a commit for the day.
 }
 
