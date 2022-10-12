@@ -1,4 +1,3 @@
-;
 export class Err extends Error {
     constructor({ message, code = 500, context = '' }) {
         super(message);
